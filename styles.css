@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dynalight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 
 @font-face {
   font-family: 'MinimalThin';
@@ -18,11 +16,16 @@ body{
     position: relative;
 }
 
-/*CABEÇALHO*/
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*HEADER*/
 
 header{
     height: 100vh;
-    background-image: url(images/planoDeFundo2.jpg);
+    background-image: url(images/headerImages/planoDeFundoInicio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0px 2px 15px 1px rgb(0, 0, 0);
@@ -35,6 +38,11 @@ header{
     position: fixed;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.329); 
+    z-index: 1000;
+}
+.topoHeader.scrolled{
+    background-color: white;
+    transition: background-color 0.3s;
 }
 .topoEsquerda, .topoDireita{
     display: flex;
@@ -55,13 +63,20 @@ header{
     gap: 10px;
     width: 80px;
 }
-.topoCentro{
+.topoCentro h1{
     font-family: "MinimalThin";
     font-size: 65px;
+    cursor: pointer;
+    font-weight: lighter;
+}
+.topoCentro h1 a{
+    text-decoration: none;
+    color: black;
 }
 #iconeLupa{
     width: 25px;
 }
+
 
 /*MAIN*/
 
@@ -85,13 +100,19 @@ header{
     background-color: #ffffff;
     font-size: 30px;
 }
+.card:hover{
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
 .card p{
     margin: auto;
+    cursor: pointer;
 }
 .card img{
     width: 100%;
     height: 250px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .goldFriday{
@@ -119,10 +140,17 @@ header{
     font-family: "MinimalThin";
 }
 .goldFriday-texto p{
-    width: 83%;
     margin-top: 40px;
-    font-size: 27px;
-    
+    font-size: 30px;
+    font-family: "Instrument Serif", serif;
+}
+.goldFriday-texto h2,
+.goldFriday-texto p {
+    max-width: 390px;
+    width: 100%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .goldFriday-imagem{
@@ -136,18 +164,68 @@ header{
 
 
 /*FOOTER*/
+
 .informacoesFooter{
     margin-top: 200px;
-    height: 500px;
+    height: 380px;
     background-color: #e9e4e0;
     border-radius: 20px;
+    display: flex;
+}
+.informacoes{
+    width: 70%;
 }
 .redesSociais{
-    width: 40%;
+    width: 50%;
     padding: 40px;
 }
-.redesSociais h2{
+.redesSociais h2, .contato h2, .categorias h2, .atendimento h2{
     font-size: 20px;
-    font-weight: 300;
-
+    font-weight: 500;
+    font-family: "Instrument Serif", serif;
+}
+#iconeInstagram, #iconeWhatsapp, #iconeEmail{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Instrument Serif", serif;
+}
+.imagemFooter{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+.imagemFooter img{
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 100%;
+    opacity: 0.1;
+    height: auto;
+    max-height: 100%;
+}
+.contatoECategorias{
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.contato, .categorias, .atendimento {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+}
+.categorias ul, .atendimento ul{
+    list-style: none;
+    padding: 0;
+}
+.categorias ul li a, .atendimento ul li a{
+    color: black;
+    text-decoration: none;
+    font-family: "Instrument Serif", serif;
+}
+.atendimento{
+    margin-left: -100px;
 }
