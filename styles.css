@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dynalight&display=swap');
+
+@font-face {
+  font-family: 'MinimalThin';
+  src: url('fonts/MinimalThin-Regular.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+
+/*CABEÇALHO*/
+
+header{
+    height: 100vh;
+    background-image: url(images/planoDeFundo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 2px 15px 1px rgb(0, 0, 0);
+}
+.topoHeader{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.329); 
+}
+.topoEsquerda, .topoDireita{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.topoEsquerda{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 40px;
+}
+.topoDireita{
+    margin-right: 40px;
+    gap: 10px;
+    width: 80px;
+}
+.topoCentro{
+    font-family: "MinimalThin";
+    font-size: 65px;
+}
+#iconeLupa{
+    width: 25px;
+}
+
+/*MAIN*/
+
+.sectionCards{
+    margin-top: 120px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+.card{
+    width: 300px;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    font-family: "MinimalThin";
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-size: 30px;
+}
+.card p{
+    margin: auto;
+}
+.card img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.goldFriday{
+    margin: auto;
+    width: 90%;
+    margin-top: 200px;
+    display: flex;
+    height: 400px;
+}
+.containerGoldFriday{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.goldFriday-texto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.goldFriday-texto h2{
+    margin-top: 50px;
+    font-size: 80px;
+    color: goldenrod;
+    font-family: "MinimalThin";
+}
+.goldFriday-texto p{
+    width: 83%;
+    margin-top: 40px;
+    font-size: 27px;
+    
+}
+
+.goldFriday-imagem{
+    flex: 1;
+}
+.goldFriday-imagem img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+/*FOOTER*/
+.informacoesFooter{
+    margin-top: 200px;
+    height: 500px;
+    background-color: #e9e4e0;
+    border-radius: 20px;
+}
+.redesSociais{
+    width: 40%;
+    padding: 40px;
+}
+.redesSociais h2{
+    font-size: 20px;
+    font-weight: 300;
+
+}
