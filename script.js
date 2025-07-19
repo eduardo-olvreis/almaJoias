@@ -8,3 +8,6 @@ window.addEventListener('scroll', function() {
         topoHeader.classList.remove('scrolled');
     }
 });
+
+//Evento para scrollar o inicio da página
+

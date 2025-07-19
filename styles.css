@@ -38,10 +38,15 @@ header{
     position: fixed;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.329); 
+    transition: background-color 0.3s;
     z-index: 1000;
 }
 .topoHeader.scrolled{
     background-color: white;
+    transition: background-color 0.3s;
+}
+.topHeader.backScrolled{
+    background-color: rgba(255, 255, 255, 0.329);
     transition: background-color 0.3s;
 }
 .topoEsquerda, .topoDireita{
@@ -99,6 +104,7 @@ header{
     border-radius: 5px;
     background-color: #ffffff;
     font-size: 30px;
+    transition: all 0.3s;
 }
 .card:hover{
     transform: scale(1.05);
@@ -169,7 +175,6 @@ header{
     margin-top: 200px;
     height: 380px;
     background-color: #e9e4e0;
-    border-radius: 20px;
     display: flex;
 }
 .informacoes{
@@ -198,8 +203,8 @@ header{
 }
 .imagemFooter img{
     position: absolute;
-    right: 0;
-    bottom: 10px;
+    right: -100px;
+    bottom: 0;
     width: 100%;
     opacity: 0.1;
     height: auto;
@@ -228,4 +233,26 @@ header{
 }
 .atendimento{
     margin-left: -100px;
+}
+.informacoesFooter a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+.informacoesFooter a::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0); 
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+.informacoesFooter a:hover::after{
+    transform: scaleX(1); 
+    transition: transform 0.3s ease-in-out;
+}
+.categorias ul li a, .atendimento ul li a {
+    display: inline-block;
 }
