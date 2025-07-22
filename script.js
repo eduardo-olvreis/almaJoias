@@ -33,7 +33,7 @@ function scrollUp(){
         window.scrollTo({ top: 0, behavior: "smooth"})
         setTimeout(() => {
             scrolling = false
-        }, 1000)
+        }, 300)
     }
     console.log(alturaHeader)
 }
@@ -46,6 +46,6 @@ function scrollDown(){
         window.scrollTo({ top: alturaHeader, behavior: 'smooth' });
         setTimeout(() => {
             scrolling = false
-        }, 1000)
+        }, 300)
     }
 }
