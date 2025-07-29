@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
 });
 
 //Evento para scrollar o inicio da página
-let scrolling = false
+/*let scrolling = false
 let lastScroll = 0
 
 window.addEventListener("scroll", function () {
@@ -49,3 +49,20 @@ function scrollDown(){
         }, 300)
     }
 }
+    */
+
+
+//Função para abrir o menu
+let menuLateral = document.querySelector(".menuLateral")
+let abreMenu = document.querySelector(".topoEsquerda")
+let fechaMenu = document.getElementById("fecharMenu")
+let blurMenu = document.querySelector(".blur")
+
+function toggleMenu(){
+    menuLateral.classList.toggle("active");
+    blurMenu.classList.toggle("active");
+}
+
+abreMenu.addEventListener("click", toggleMenu)
+fechaMenu.addEventListener("click", toggleMenu)
+blurMenu.addEventListener("click", toggleMenu)
