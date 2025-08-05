@@ -152,6 +152,25 @@ header{
     color: black;
     text-decoration: none;
 }
+.categoriasMenu li a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+.categoriasMenu li a::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0); 
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+.categoriasMenu li a:hover::after{
+    transform: scaleX(1); 
+    transition: transform 0.3s ease-in-out;
+}
 
 /*MAIN*/
 
